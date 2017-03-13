@@ -1,55 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="aframe.min.js"></script>
-    <script src="aframe-particle-system-component.min.js"></script>
-    <script src="shifty.min.js"></script>
-    <script src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
-$(function() {
-    $.getScript('animation.js');
-});
-</script>
-  </head>
-  <body>
-    <a-scene id="scene" inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
-      <a-assets>
-        <a-asset-item id="mensch-obj" src="models/Mensch.obj"></a-asset-item>
-        <a-asset-item id="mensch-mtl" src="models/Mensch.mtl"></a-asset-item>
-        <a-asset-item id="chinagirl-obj" src="models/chinagirl.obj"></a-asset-item>
-        <a-asset-item id="chinagirl-mtl" src="models/chinagirl.mtl"></a-asset-item>
-        <a-asset-item id="gott-obj" src="models/Gott.obj"></a-asset-item>
-        <a-asset-item id="gott-mtl" src="models/Gott.mtl"></a-asset-item>
-        <a-asset-item id="japtemple-obj" src="models/JapaneseTemple.obj"></a-asset-item>
-        <a-asset-item id="japtemple-mtl" src="models/JapaneseTemple.mtl"></a-asset-item>
-        <a-asset-item id="BauwerkChina-obj" src="models/BauwerkChina.obj"></a-asset-item>
-        <a-asset-item id="BauwerkChina-mtl" src="models/BauwerkChina.mtl"></a-asset-item>
-        <a-asset-item id="bush_small-obj" src="models/bush_small.obj"></a-asset-item>
-        <a-asset-item id="bush_small-mtl" src="models/bush_small.mtl"></a-asset-item>
-        <a-asset-item id="cherry_tree_hanging_1-obj" src="models/cherry_tree_hanging_1.obj"></a-asset-item>
-        <a-asset-item id="cherry_tree_hanging_1-mtl" src="models/cherry_tree_hanging_1.mtl"></a-asset-item>
-        <a-asset-item id="cherry_tree_medium_1-obj" src="models/cherry_tree_medium_1.obj"></a-asset-item>
-        <a-asset-item id="cherry_tree_medium_1-mtl" src="models/cherry_tree_medium_1.mtl"></a-asset-item>
-        <a-asset-item id="cherry_tree_medium_2-obj" src="models/cherry_tree_medium_2.obj"></a-asset-item>
-        <a-asset-item id="cherry_tree_medium_2-mtl" src="models/cherry_tree_medium_2.mtl"></a-asset-item>
-        <a-asset-item id="Haus1-obj" src="models/Haus1.obj"></a-asset-item>
-        <a-asset-item id="Haus1-mtl" src="models/Haus1.mtl"></a-asset-item>
-      </a-assets>
 
-      <a-obj-model class="mensch" src="#chinagirl-obj" mtl="#chinagirl-mtl" scale="0.1 0.1 0.1" position="-1 0 -3" rotation="0 0 0" color="#F55"
-></a-obj-model>
-      <a-obj-model class="mensch" src="#mensch-obj" mtl="#mensch-mtl" scale="0.1 0.1 0.1" position="1 0 -5" rotation="0 0 0" color="#F55"
-></a-obj-model>
+<head>
+    <title>VR Sezuan</title>
+</head>
 
-      <a-obj-model class="structure" src="#japtemple-obj" mtl="#japtemple-mtl" scale="0.2 0.2 0.2" position="0 0 -20" rotation="0 0 0" color="#F55"
-></a-obj-model>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
-      <a-sky color="#000000"></a-sky>
+<body>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <div><a href="lowend.html"><button type="button" class="btn btn-lg btn-primary">Lite Version (Mobile)</button></a></div>
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <div><a href="highend.html"><button type="button" class="btn btn-lg btn-primary">Full Version (Computer)</button></a></div>
+    </div>
+</body>
 
-    </a-scene>
-
-  </body>
 </html>

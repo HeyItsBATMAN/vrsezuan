@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="aframe.min.js"></script>
+    <script src="aframe-crawling-cursor.min.js"></script>
+    <script src="shifty.min.js"></script>
+    <script src="tween.min.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $.getScript('animation.js');
+            $.getScript('listener-component.js');
+        });
+    </script>
+</head>
+
+<body>
+    <a-scene stats id="scene" fog="type: linear; color: #87f9dd" inspector="url: https://aframe.io/releases/0.4.0/aframe-inspector.min.js">
+        <a-assets>
+            <a-asset-item id="cloud" src="models/landscape/cloud.dae"></a-asset-item>
+            <a-asset-item id="C1A" src="models/chunks/1A.dae"></a-asset-item>
+            <a-asset-item id="C1B" src="models/chunks/1B.dae"></a-asset-item>
+            <a-asset-item id="C1C" src="models/chunks/1C.dae"></a-asset-item>
+            <a-asset-item id="C1D" src="models/chunks/1D.dae"></a-asset-item>
+            <a-asset-item id="C1E" src="models/chunks/1E.dae"></a-asset-item>
+
+            <a-asset-item id="C2A" src="models/chunks/2A.dae"></a-asset-item>
+            <a-asset-item id="C2B" src="models/chunks/2B.dae"></a-asset-item>
+            <a-asset-item id="C2C" src="models/chunks/2C.dae"></a-asset-item>
+            <a-asset-item id="C2D" src="models/chunks/2D.dae"></a-asset-item>
+            <a-asset-item id="C2E" src="models/chunks/2E.dae"></a-asset-item>
+
+            <a-asset-item id="C3A" src="models/chunks/3A.dae"></a-asset-item>
+            <a-asset-item id="C3B" src="models/chunks/3B.dae"></a-asset-item>
+            <a-asset-item id="C3C" src="models/chunks/3C.dae"></a-asset-item>
+            <a-asset-item id="C3D" src="models/chunks/3D.dae"></a-asset-item>
+            <a-asset-item id="C3E" src="models/chunks/3E.dae"></a-asset-item>
+
+            <a-asset-item id="C4A" src="models/chunks/4A.dae"></a-asset-item>
+            <a-asset-item id="C4B" src="models/chunks/4B.dae"></a-asset-item>
+            <a-asset-item id="C4C" src="models/chunks/4C.dae"></a-asset-item>
+            <a-asset-item id="C4D" src="models/chunks/4D.dae"></a-asset-item>
+            <a-asset-item id="C4E" src="models/chunks/4E.dae"></a-asset-item>
+
+            <a-asset-item id="C5A" src="models/chunks/5A.dae"></a-asset-item>
+            <a-asset-item id="C5B" src="models/chunks/5B.dae"></a-asset-item>
+            <a-asset-item id="C5C" src="models/chunks/5C.dae"></a-asset-item>
+            <a-asset-item id="C5D" src="models/chunks/5D.dae"></a-asset-item>
+            <a-asset-item id="C5E" src="models/chunks/5E.dae"></a-asset-item>
+
+            <a-asset-item id="chinagirl-obj" src="models/persons/chinagirl.obj"></a-asset-item>
+            <a-asset-item id="chinagirl-mtl" src="models/persons/chinagirl.mtl"></a-asset-item>
+
+            <a-asset-item id="chinaman-obj" src="models/persons/chinaman.obj"></a-asset-item>
+            <a-asset-item id="chinaman-mtl" src="models/persons/chinaman.mtl"></a-asset-item>
+
+            <a-asset-item id="chinaopi-obj" src="models/persons/chinaopi.obj"></a-asset-item>
+            <a-asset-item id="chinaopi-mtl" src="models/persons/chinaopi.mtl"></a-asset-item>
+
+            <a-asset-item id="Gott-obj" src="models/persons/Gott.obj"></a-asset-item>
+            <a-asset-item id="Gott-mtl" src="models/persons/Gott.mtl"></a-asset-item>
+
+            <a-asset-item id="hauptmann-obj" src="models/persons/hauptmann.obj"></a-asset-item>
+            <a-asset-item id="hauptmann-mtl" src="models/persons/hauptmann.mtl"></a-asset-item>
+
+            <a-asset-item id="jan-normal-obj" src="models/persons/jan - normal.obj"></a-asset-item>
+            <a-asset-item id="jan-normal-mtl" src="models/persons/jan - normal.mtl"></a-asset-item>
+
+            <a-asset-item id="jan-VR-obj" src="models/persons/jan - VR.obj"></a-asset-item>
+            <a-asset-item id="jan-VR-mtl" src="models/persons/jan - VR.mtl"></a-asset-item>
+
+            <a-asset-item id="KatzenOmi-obj" src="models/persons/KatzenOmi.obj"></a-asset-item>
+            <a-asset-item id="KatzenOmi-mtl" src="models/persons/KatzenOmi.mtl"></a-asset-item>
+
+            <a-asset-item id="soldat-obj" src="models/persons/soldat.obj"></a-asset-item>
+            <a-asset-item id="soldat-mtl" src="models/persons/soldat.mtl"></a-asset-item>
+
+            <a-asset-item id="statist-obj" src="models/persons/statist.obj"></a-asset-item>
+            <a-asset-item id="statist-mtl" src="models/persons/statist.mtl"></a-asset-item>
+
+            <a-asset-item id="statist2-obj" src="models/persons/statist2.obj"></a-asset-item>
+            <a-asset-item id="statist2-mtl" src="models/persons/statist2.mtl"></a-asset-item>
+
+            <a-asset-item id="statist3-obj" src="models/persons/statist3.obj"></a-asset-item>
+            <a-asset-item id="statist3-mtl" src="models/persons/statist3.mtl"></a-asset-item>
+
+
+        </a-assets>
+
+        <a-cursor id="my-cursor" geometry="primitive: ring; radiusInner: 0.2; radiusOuter: 0.4" visible="false" material="color: lightblue"></a-cursor>
+        <a-camera id="camera" look-controls-enabled="true" fov="50" raycaster="interval: 500" position="-241 8 -63" rotation="0 -90 0" crawling-cursor="target: #my-cursor" wasd-controls="acceleration: 500; enabled: true">
+            <a-image id="textbox" src="textboxen-story/jason1-1.png" width="600" opacity="0" visible="true" height="200" position="0 -1.5 -5" scale="0.01 0.01 0.01"></a-image>
+        </a-camera>
+        <a-entity id="box" cursor-listener position="-271 8 -84" geometry="primitive: box" scale="3 3 3" material="color: blue" visible="false"></a-entity>
+
+        <a-collada-model src="url(models/landscape/arrow.dae);" id="arrow" scale="0.5 0.5 0.5"></a-collada-model>
+        <a-entity class="mensch" id="ShenTe" obj-model="obj: #chinagirl-obj; mtl: #chinagirl-mtl" scale="0.8 0.8 0.8" position="-211 0 77"></a-entity>
+        <a-entity class="mensch" id="Chow" obj-model="obj: #chinaman-obj; mtl: #chinaman-mtl" scale="0.8 0.8 0.8" position="-153 0 31"></a-entity>
+        <a-entity class="mensch" id="Mengo" obj-model="obj: #chinaopi-obj; mtl: #chinaopi-mtl" scale="0.8 0.8 0.8" position="-110 0 -37"></a-entity>
+        <a-entity class="mensch" id="Gott" obj-model="obj: #Gott-obj; mtl: #Gott-mtl" position="-64 0 -81"></a-entity>
+        <a-entity class="mensch" obj-model="obj: #Gott-obj; mtl: #Gott-mtl" scale="0.5 0.5 0.5" position="-61 5 -75"></a-entity>
+        <a-entity class="mensch" obj-model="obj: #Gott-obj; mtl: #Gott-mtl" scale="0.5 0.5 0.5" position="-66 5 -87"></a-entity>
+        <a-entity class="mensch" id="Peng" obj-model="obj: #KatzenOmi-obj; mtl: #KatzenOmi-mtl" scale="0.4 0.4 0.4" position="-186 0 -177"></a-entity>
+        <!--a-entity class="mensch" obj-model="obj: #hauptmann-obj; mtl: #hauptmann-mtl" position="-162 0 -101"></a-entity>
+      <a-entity class="mensch" obj-model="obj: #jan-normal-obj; mtl: #jan-normal-mtl" position="-97 0 -154"></a-entity>
+      <a-entity class="mensch" obj-model="obj: #jan-VR-obj; mtl: #jan-VR-mtl" position="-122 0 -12"></a-entity>
+
+      <a-entity class="mensch" obj-model="obj: #soldat-obj; mtl: #soldat-mtl" position="-253 0 -19"></a-entity>
+      <a-entity class="mensch" obj-model="obj: #statist-obj; mtl: #statist-mtl" position="-157 0 -238"></a-entity>
+      <a-entity class="mensch" obj-model="obj: #statist2-obj; mtl: #statist2-mtl" position="-222 0 -272"></a-entity>
+      <a-entity class="mensch" obj-model="obj: #statist3-obj; mtl: #statist3-mtl" position="-223 0 -180"></a-entity-->
+
+
+
+        <a-collada-model src="#C1A" position="-320 -15 -320" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C1B" position="-320 -15 -194" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C1C" position="-320 -15 -68" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C1D" position="-320 -15 58" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C1E" position="-320 -15 184" rotation="0 270 0"></a-collada-model>
+
+        <a-collada-model src="#C2A" position="-194 -15 -320" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C2B" position="-194 -15 -194" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C2C" position="-194 -15 -68" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C2D" position="-194 -15 58" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C2E" position="-194 -15 184" rotation="0 270 0"></a-collada-model>
+
+        <a-collada-model src="#C3A" position="-68 -15 -320" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C3B" position="-68 -15 -194" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C3C" position="-68 -15 -68" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C3D" position="-68 -15 58" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C3E" position="-68 -15 184" rotation="0 270 0"></a-collada-model>
+
+        <a-collada-model src="#C4A" position="58 -15 -320" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C4B" position="58 -15 -194" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C4C" position="58 -15 -68" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C4D" position="58 -15 58" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C4E" position="58 -15 184" rotation="0 270 0"></a-collada-model>
+
+        <a-collada-model src="#C5A" position="184 -15 -320" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C5B" position="184 -15 -194" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C5C" position="184 -15 -68" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C5D" position="184 -15 58" rotation="0 270 0"></a-collada-model>
+        <a-collada-model src="#C5E" position="184 -15 184" rotation="0 270 0"></a-collada-model>
+
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+        <a-collada-model class="cloud" src="#cloud" scale="1 1 1" position="184 80 -115"></a-collada-model>
+
+        <a-light id="ambilight" intensity="1.7" type="ambient" color="#CC9"></a-light>
+        <a-sky color="#87f9dd"></a-sky>
+    </a-scene>
+</body>
+
+</html>
